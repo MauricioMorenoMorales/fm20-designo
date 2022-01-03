@@ -31,7 +31,7 @@ header
 	margin 0 auto
 	padding 20px 10px
 	& img
-		width 150px
+		width 160px
 		height 20px
 .links
 	display none
@@ -61,6 +61,23 @@ header
 	top 96px
 	z-index 1000
 	background-color transparentBaseSecondary
+@media screen and (min-width: 768px)
+	.header
+		max-width 700px
+		padding 50px 0
+	.links
+		display flex
+		width 370px
+		justify-content space-between
+	.plegable
+		display none
+	.modal
+		display none
+	.burger
+		display none
+@media screen and (min-width 1200px)
+	.header
+		max-width 1100px
 </style>
 
 <script lang="ts">
