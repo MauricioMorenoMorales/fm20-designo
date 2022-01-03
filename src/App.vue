@@ -1,6 +1,6 @@
 <template lang="pug">
 .nav
-  Button(type="primary") Click Me
+  Button(kind="secondary") Click Me
   router-view
 </template>
 
