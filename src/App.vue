@@ -3,16 +3,19 @@
   Header
   Button(kind="secondary") Click Me
   router-view
+  Footer
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Button from '@atoms/Button.vue';
 import Header from '@components/Header.vue';
+import Footer from '@components/Footer.vue';
 export default defineComponent({
 	components: {
 		Button,
 		Header,
+		Footer,
 	},
 });
 </script>
