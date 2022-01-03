@@ -1,0 +1,69 @@
+@import '~@/_tokens.styl'
+*
+	box-sizing border-box
+	margin 0
+	font-family fontFamilyPrimary
+
+button
+	font-family fontFamilyPrimary
+
+h1
+	font-size 4rem
+	line-height 4rem
+
+h2
+	font-size 4rem
+	line-height 4rem
+
+h3
+	font-size 3.2rem
+	line-height 3.2rem
+
+h4
+	font-size 1.8rem
+	line-height 2.8rem
+
+p
+	font-weight semi-bold
+	font-size 1.8rem
+	line-height 2.8rem
+
+small
+	font-weight semi-bold
+	display block
+	font-size 1.5rem
+	line-height 2.5rem
+
+a
+	color basePrimary
+	text-decoration none
+	font-size 1.8rem
+	margin-right 5px
+	&:hover
+		text-decoration underline
+
+b
+	color accent
+
+mark
+	color secondaryMoreDesaturated
+	background-color transparent
+
+cite
+	display block
+
+@media screen and (min-width: 768px)
+	h1
+		font-size 6.4rem
+		line-height 5.6rem
+	h2
+		font-size 6.4rem
+		line-height 5.6rem
+
+@media screen and (min-width: 1100px)
+	h1
+		font-size 10rem
+		line-height 10rem
+	h3
+		font-size 4.8rem
+		line-height 4.8rem
