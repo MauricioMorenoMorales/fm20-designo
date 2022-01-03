@@ -4,7 +4,8 @@
 button.hamburger.hamburger--emphatic(
 	:class="{ 'is-active': active }"
 	type="button"
-	@click.prevent="toggle")
+	@click.prevent="toggle"
+)
 	span.hamburger-box
 		span.hamburger-inner
 </template>
@@ -62,7 +63,7 @@ export default defineComponent({
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after
-	background-color basePrimary
+	background-color fontColorPrimary
 
 .hamburger-box
 	width 40px
@@ -84,7 +85,7 @@ export default defineComponent({
 .hamburger-inner::after
 	width 40px
 	height 4px
-	background-color basePrimary
+	background-color fontColorPrimary
 	border-radius 4px
 	position absolute
 	transition-property transform

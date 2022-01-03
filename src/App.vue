@@ -1,5 +1,6 @@
 <template lang="pug">
 .nav
+  Header
   Button(kind="secondary") Click Me
   router-view
 </template>
@@ -7,9 +8,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Button from '@atoms/Button.vue';
+import Header from '@components/Header.vue';
 export default defineComponent({
 	components: {
 		Button,
+		Header,
 	},
 });
 </script>
@@ -20,7 +23,6 @@ export default defineComponent({
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
   color #2c3e50
-  background-color accent
+  background-color basePrimary
 </style>
