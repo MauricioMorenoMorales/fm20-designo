@@ -58,7 +58,6 @@ header
 	right 0
 	bottom 0
 	top 0
-	top 96px
 	z-index 1000
 	background-color transparentBaseSecondary
 @media screen and (min-width: 768px)

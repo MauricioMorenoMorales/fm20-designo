@@ -1,1 +1,2 @@
 Agregar funcionalidad a los links de navegacion
+Arregla el modal del header
