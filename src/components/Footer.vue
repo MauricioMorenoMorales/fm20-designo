@@ -2,7 +2,7 @@
 footer
 	.call
 		.call__text
-			h2 Let’s talk about your project
+			h2.h2 Let's talk about your project
 			p Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
 		Button Get in touch
 	.footer--container
@@ -52,6 +52,7 @@ footer
 	&__text
 		& > *
 			margin-bottom 20px
+			font-weight fontWeightNormal
 .footer
 	color fontColorSecondary
 	text-align center
@@ -62,6 +63,7 @@ footer
 	&--container
 		background-color baseSecondary
 	&__navigation
+		margin-top 60px
 		& img
 			height 25px
 			width 200px
@@ -79,6 +81,54 @@ footer
 		&__social
 			& > *
 				margin 5px
+@media screen and (min-width 768px)
+	.call
+		max-width 700px
+		padding-left 120px
+		padding-right 120px
+		background-size 140% 160%
+	.footer
+		max-width 700px
+		&__navigation
+			display flex
+			align-items center
+			justify-content space-between
+			padding-bottom 35px
+			border-bottom 1px solid baseSecondaryDesaturated
+			& img
+				margin 0
+			&__links
+				flex-direction row
+				border none
+				& a
+					margin-top 0
+					margin-left 35px
+		&__contact
+			display grid
+			grid-template-columns 235px 250px 1fr
+			text-align start
+			&__social
+				align-self end
+				justify-self end
+@media screen and (min-width 1200px)
+	.call
+		max-width 1100px
+		display flex
+		align-items center
+		justify-content space-between
+		text-align start
+		padding-left 90px
+		padding-right 90px
+		background-position-x 120px
+		background-size 90% 150%
+		&__text
+			max-width 450px
+			& .h2
+				max-width 300px
+	.footer
+		max-width 1100px
+		&__contact
+			grid-template-columns 1fr 1fr 1fr
 </style>
 
 <script lang="ts">
