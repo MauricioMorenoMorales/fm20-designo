@@ -1,12 +1,12 @@
 <template lang="pug">
 footer
-	.call
+	.call(v-show="!simple")
 		.call__text
 			h2.h2 Let's talk about your project
 			p Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
 		Button Get in touch
 	.footer--container
-		.footer
+		.footer(:class="{simple}")
 			.footer__navigation
 				img(src="~@assets/shared/desktop/logo-light.png" alt="Designo Logo")
 				.footer__navigation__links
@@ -24,11 +24,10 @@ footer
 					p: b M : contact@designo.com
 				.footer__contact__social
 					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
-					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
-					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
-					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
-					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
-					Icon(iconName="facebook" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
+					Icon(iconName="youtube" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
+					Icon(iconName="twitter" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
+					Icon(iconName="pinterest" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
+					Icon(iconName="instagram" :iconColor="accentColor" :hoverColor="accentColorDesaturated")
 </template>
 
 <style lang="stylus" scoped>
@@ -60,10 +59,12 @@ footer
 	margin 0 auto
 	padding-top 190px
 	padding-bottom 60px
+	&.simple
+		padding-top 0
 	&--container
 		background-color baseSecondary
 	&__navigation
-		margin-top 60px
+		padding-top 60px
 		& img
 			height 25px
 			width 200px
@@ -142,6 +143,13 @@ export default defineComponent({
 			accentColor: colorSystem.accent,
 			accentColorDesaturated: colorSystem.accentDesaturated,
 		};
+	},
+	props: {
+		simple: {
+			type: Boolean,
+			required: false,
+			default: false,
+		},
 	},
 	components: {
 		Button,
