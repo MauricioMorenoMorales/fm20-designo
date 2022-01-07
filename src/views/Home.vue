@@ -12,20 +12,36 @@
 			.pages-links__item__content
 				h3 Web design
 				.pages-links__item__link
-					h4 view projects
+					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
 		.pages-links__item.app
 			.pages-links__item__content
 				h3 app design
 				.pages-links__item__link
-					h4 view projects
+					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
 		.pages-links__item.graphic
 			.pages-links__item__content
 				h3 graphic design
 				.pages-links__item__link
-					h4 view projects
+					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
+	.values
+		.values__item
+			img(src="~@assets/home/desktop/illustration-passionate.svg" alt="")
+			.values__item__text
+				h4 passionate
+				p Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.
+		.values__item
+			img(src="~@assets/home/desktop/illustration-resourceful.svg" alt="")
+			.values__item__text
+				h4 resourceful
+				p Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.
+		.values__item
+			img(src="~@assets/home/desktop/illustration-friendly.svg" alt="")
+			.values__item__text
+				h4 friendly
+				p  We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.
 	Footer
 </template>
 
@@ -86,7 +102,7 @@
 			align-items center
 			justify-content center
 			margin-top 20px
-			& h4
+			& h5
 				margin-right 15px
 			& img
 				margin-bottom 3px
@@ -117,6 +133,17 @@
 				width: 100%; height: 100%;
 				background-image url("~@assets/home/mobile/image-graphic-design.jpg")
 				filter brightness(50%)
+.values
+	max-width 320px
+	text-align center
+	margin 0 auto
+	&__item
+		margin-bottom 60px
+		& img
+			margin-bottom 30px
+		&__text
+			& > *
+				margin-bottom 20px
 @media screen and (min-width 768px)
 	.hero
 		max-width 700px
@@ -148,6 +175,14 @@
 				&::before
 					background-image url("~@assets/home/tablet/image-graphic-design.jpg")
 					background-size cover
+	.values
+		max-width 700px
+		text-align start
+		&__item
+			display flex
+			align-items center
+			& img
+				margin-right 50px
 @media screen and (min-width 1200px)
 	.hero
 		max-width 1100px
@@ -179,6 +214,16 @@
 			&.graphic
 				&::before
 					background-image url("~@assets/home/desktop/image-graphic-design.jpg")
+	.values
+		max-width 1100px
+		text-align center
+		display grid
+		grid-template-columns 1fr 1fr 1fr
+		gap 25px
+		&__item
+			display block
+			& img
+				margin-right 0
 </style>
 
 <script lang="ts">
