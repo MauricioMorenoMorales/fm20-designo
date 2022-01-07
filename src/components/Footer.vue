@@ -120,8 +120,9 @@ footer
 		text-align start
 		padding-left 90px
 		padding-right 90px
-		background-position-x 120px
-		background-size 90% 150%
+		background-position-x 70px
+		background-position-y -220px
+		background-size cover
 		&__text
 			max-width 450px
 			& .h2
