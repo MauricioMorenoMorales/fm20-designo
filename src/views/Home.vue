@@ -31,17 +31,23 @@
 			img(src="~@assets/home/desktop/illustration-passionate.svg" alt="")
 			.values__item__text
 				h4 passionate
-				p Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.
+				p Each project starts with an in-depth brand research to ensure we only create
+					|products that serve a purpose. We merge art, design, and technology into exciting
+					|new solutions.
 		.values__item
-			img(src="~@assets/home/desktop/illustration-resourceful.svg" alt="")
+			img(src="~@assets/home/desktop/illustration-resourceful.svg" alt="resourceful illustration")
 			.values__item__text
 				h4 resourceful
-				p Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.
+				p Everything that we do has a strategic purpose. We use an agile approach in all of
+					|our projects and value customer collaboration. It guarantees superior results that
+					|fulfill our clients’ needs.
 		.values__item
-			img(src="~@assets/home/desktop/illustration-friendly.svg" alt="")
+			img(src="~@assets/home/desktop/illustration-friendly.svg" alt="friendly illustration")
 			.values__item__text
 				h4 friendly
-				p  We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.
+				p  We are a group of enthusiastic folks who know how to put people first. Our
+					|success depends on our customers, and we strive to give them the best experience
+					|a company can provide.
 	Footer
 </template>
 
