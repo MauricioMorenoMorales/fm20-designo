@@ -26,6 +26,20 @@
 				|meaning are just as important. We give great importance to craftsmanship, service, and
 				|prompt delivery. Clients have always been impressed with our high-quality outcomes that
 				|encapsulates their brand’s story and mission.
+	article.about-deal
+		picture
+			source(media="screen and (min-width: 1200px)" srcset="~@assets/about/desktop/image-real-deal.jpg")
+			source(media="screen and (min-width: 768px)" srcset="~@assets/about/tablet/image-real-deal.jpg")
+			img(src="~@assets/about/mobile/image-real-deal.jpg" alt="Real deal image")
+		section.about-deal__text
+			h2 The real deal
+			p As strategic partners in our clients’ businesses, we are ready to take on any
+				|challenge as our own. Solving real problems require empathy and collaboration,
+				|and we strive to bring a fresh perspective to every opportunity. We make design
+				|and technology more accessible and give you tools to measure success.
+			p We are visual storytellers in appealing and captivating ways.
+				|By combining business and marketing strategies, we inspire audiences to take
+				|action and drive real results.
 	Footer
 </template>
 
@@ -57,6 +71,18 @@
 		& h2
 			color accent
 			margin-bottom 20px
+.about-deal
+	& picture > img
+		width 100%
+	&__text
+		text-align center
+		background-color basePrimaryMoreDesaturated
+		margin-top -3px
+		padding 80px 20px
+		& h2
+			color accent
+			margin-bottom 20px
+
 @media screen and (min-width 768px)
 	.about-hero
 		max-width 700px
@@ -70,6 +96,17 @@
 			background-position 0
 			background-position-y -200px
 	.about-talent
+		max-width 700px
+		margin 0 auto
+		border-radius borderRadius
+		overflow hidden
+		margin-bottom 100px
+		&__text
+			padding 80px 60px
+			& p
+				margin-bottom 30px
+	.about-deal
+		// Hacer un mixin con esto
 		max-width 700px
 		margin 0 auto
 		border-radius borderRadius
@@ -101,6 +138,18 @@
 		grid-template-columns 480px 1fr
 		&__text
 			display flex
+			flex-direction column
+			justify-content center
+			padding 0 90px
+			text-align start
+	.about-deal
+		max-width 1100px
+		display grid
+		grid-template-columns 1fr 480px
+		grid-template-areas "text image"
+		&__text
+			display flex
+			grid-area text
 			flex-direction column
 			justify-content center
 			padding 0 90px
