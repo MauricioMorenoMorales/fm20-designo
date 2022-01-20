@@ -1,3 +1,4 @@
 Agregar funcionalidad a los links de navegacion
 Arregla el modal del header
 agrega funcionalidad a los links de el header y el footer
+Reusa los estilos repetidos en el about con mixins

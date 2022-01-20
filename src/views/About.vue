@@ -26,6 +26,7 @@
 				|meaning are just as important. We give great importance to craftsmanship, service, and
 				|prompt delivery. Clients have always been impressed with our high-quality outcomes that
 				|encapsulates their brand’s story and mission.
+	Links.about-links
 	article.about-deal
 		picture
 			source(media="screen and (min-width: 1200px)" srcset="~@assets/about/desktop/image-real-deal.jpg")
@@ -71,6 +72,8 @@
 		& h2
 			color accent
 			margin-bottom 20px
+.about-links
+	margin-bottom 100px
 .about-deal
 	& picture > img
 		width 100%
@@ -159,9 +162,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Footer from '@components/Footer.vue';
+import Links from '@components/Links.vue';
 export default defineComponent({
 	components: {
 		Footer,
+		Links,
 	},
 });
 </script>
