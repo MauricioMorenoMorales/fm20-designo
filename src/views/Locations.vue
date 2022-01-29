@@ -88,6 +88,7 @@
 		grid-template-columns 1fr 350px
 		grid-template-areas "text picture"
 		gap 30px
+		margin-bottom 30px
 		& picture > img
 			object-fit cover
 			height 100%

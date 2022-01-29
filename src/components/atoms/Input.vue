@@ -9,6 +9,8 @@ div.input(v-else)
 
 <style lang="stylus" scoped>
 @import '~@/_tokens.styl'
+.input
+	position relative
 input, textarea
 	display block
 	width 100%
@@ -21,12 +23,27 @@ input, textarea
 	outline none
 	padding-left 20px
 	border-radius 0
+	&::placeholder
+		color fontColorSecondaryDesaturated
 	&.error
-		border-bottom 1px solid red
+		border-bottom 3px solid basePrimary
 small
-	color red
-	font-size 1rem
+	color fontColorSecondary
+	font-size 1.2rem
 	line-height 1.2rem
+	position absolute
+	top 0
+	right 20px
+	bottom 0
+	margin auto 0
+	padding-right 25px
+	display flex
+	align-items center
+	z-index 10
+	background-image url("~@assets/contact/desktop/icon-error.svg")
+	background-repeat no-repeat
+	background-position-y center
+	background-position-x 100%
 textarea
 	resize none
 	padding-top 20px
