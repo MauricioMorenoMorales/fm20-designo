@@ -1,19 +1,20 @@
 <template lang="pug">
 header
-	.header
-		img(src="~@assets/shared/desktop/logo-dark.png" alt="Designo Logo" @click="goToUrl('/')")
-		.links
-			router-link(to="/about") Our company
-			router-link(to="/locations") Locations
-			router-link(to="/contact") Contact
-		.burger
-			burger(@click-event="toggleMenu" :active-state="menuOpened")
-		.plegable(v-show="menuOpened")
-			.plegable__inner-container
-				router-link(to="/about" @click="closeMenu()") Our company
-				router-link(to="/locations" @click="closeMenu()") Locations
-				router-link(to="/contact" @click="closeMenu()") Contact
-		.modal(v-show="menuOpened" @click="closeMenu()")
+	.header--container
+		.header
+			img(src="~@assets/shared/desktop/logo-dark.png" alt="Designo Logo" @click="closeMenu('/')")
+			.links
+				router-link(to="/about") Our company
+				router-link(to="/locations") Locations
+				router-link(to="/contact") Contact
+			.burger
+				burger(@click-event="toggleMenu" :active-state="menuOpened")
+	.plegable(v-show="menuOpened")
+		.plegable__inner-container
+			router-link(to="/about" @click="closeMenu()") Our company
+			router-link(to="/locations" @click="closeMenu()") Locations
+			router-link(to="/contact" @click="closeMenu()") Contact
+	.modal(v-show="menuOpened" @click="closeMenu()")
 </template>
 
 <style lang="stylus" scoped>
@@ -30,6 +31,10 @@ header
 	max-width 320px
 	margin 0 auto
 	padding 20px 10px
+	&--container
+		position relative
+		z-index 100000
+		background-color white
 	& img
 		width 160px
 		height 20px
@@ -96,8 +101,11 @@ export default defineComponent({
 		toggleMenu(value: boolean): void {
 			this.menuOpened = value;
 		},
-		closeMenu(): void {
+		closeMenu(url: string): void {
 			this.menuOpened = false;
+			if (url) {
+				this.goToUrl(url);
+			}
 		},
 		goToUrl(url: string): void {
 			this.$router.push(url);
