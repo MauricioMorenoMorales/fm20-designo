@@ -10,9 +10,9 @@ footer
 			.footer__navigation
 				img(src="~@assets/shared/desktop/logo-light.png" alt="Designo Logo")
 				.footer__navigation__links
-					a(href="/") Our Company
-					a(href="/") Locations
-					a(href="/") Contact
+					router-link(to="/about") Our company
+					router-link(to="/locations") Locations
+					router-link(to="/contact") Contact
 			.footer__contact
 				.footer__contact__address
 					p: b Designo Central Office

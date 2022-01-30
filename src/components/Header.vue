@@ -3,16 +3,16 @@ header
 	.header
 		img(src="~@assets/shared/desktop/logo-dark.png" alt="Designo Logo" @click="closeMenu()")
 		.links
-			a(href="/") Our company
-			a(href="/") Locations
-			a(href="/") Contact
+			router-link(to="/about") Our company
+			router-link(to="/locations") Locations
+			router-link(to="/contact") Contact
 		.burger
 			burger(@click-event="toggleMenu" :active-state="menuOpened")
 		.plegable(v-show="menuOpened")
 			.plegable__inner-container
-				a(href="/") Our company
-				a(href="/") Locations
-				a(href="/") Contact
+				router-link(to="/about" @click="closeMenu()") Our company
+				router-link(to="/locations" @click="closeMenu()") Locations
+				router-link(to="/contact" @click="closeMenu()") Contact
 		.modal(v-show="menuOpened" @click="closeMenu()")
 </template>
 
