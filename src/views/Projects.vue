@@ -9,12 +9,16 @@
 			.projects__items__item__text
 				h4 {{item.title}}
 				p {{item.description}}
-	Links
+	Links.mb100.mt100
 	Footer
 </template>
 
 <style lang="stylus" scoped>
 @import "~@/_tokens.styl"
+.mb100
+	margin-bottom 100px
+.mt100
+	margin-top 100px
 .projects
 	&__hero
 		background-color accent
@@ -22,6 +26,8 @@
 		padding 100px 25px
 		text-align center
 		margin-bottom 100px
+		& > h2
+			margin-bottom 30px
 	&__items
 		max-width 320px
 		margin 0 auto
@@ -38,6 +44,36 @@
 					margin-bottom 20px
 					color accent
 					text-transform uppercase
+@media screen and (min-width 768px)
+	.projects
+		&__hero
+			max-width 700px
+			border-radius borderRadius
+			margin 0 auto
+			margin-bottom 100px
+			padding 74px 175px
+		&__items
+			max-width 700px
+			&__item
+				display grid
+				grid-template-columns 340px 1fr
+				&__text
+					display flex
+					flex-direction column
+					align-items center
+					justify-content center
+@media screen and (min-width 1200px)
+	.projects
+		&__hero
+			max-width 1100px
+			padding 65px 375px
+		&__items
+			max-width 1100px
+			display grid
+			grid-template-columns 1fr 1fr 1fr
+			gap 30px
+			&__item
+				display block
 </style>
 
 <script lang="ts">
