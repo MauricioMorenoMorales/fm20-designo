@@ -6,21 +6,21 @@
 			p With over 10 years in the industry, we are experienced in creating fully
 				| responsive websites, app design, and engaging brand experiences.
 				| Find out more about our services.
-			Button Learn More
+			Button(@click-event="goToUrl('/about')") Learn More
 	.pages-links
-		.pages-links__item.web
+		.pages-links__item.web(@click="goToUrl('/projects/web-design')")
 			.pages-links__item__content
 				h3 Web design
 				.pages-links__item__link
 					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
-		.pages-links__item.app
+		.pages-links__item.app(@click="goToUrl('/projects/app-design')")
 			.pages-links__item__content
 				h3 app design
 				.pages-links__item__link
 					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
-		.pages-links__item.graphic
+		.pages-links__item.graphic(@click="goToUrl('/projects/graphic-design')")
 			.pages-links__item__content
 				h3 graphic design
 				.pages-links__item__link
@@ -240,6 +240,11 @@ export default defineComponent({
 	components: {
 		Footer,
 		Button,
+	},
+	methods: {
+		goToUrl(url: string): void {
+			this.$router.push(url);
+		},
 	},
 });
 </script>

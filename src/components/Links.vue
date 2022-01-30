@@ -3,15 +3,15 @@
 	.links-icons__item
 		img(src="~@assets/shared/desktop/illustration-canada.svg")
 		h5 CANADA
-		Button(kind="secondary") SEE LOCATION
+		Button(kind="secondary" @click="goToUrl('/locations')") SEE LOCATION
 	.links-icons__item
 		img(src="~@assets/shared/desktop/illustration-australia.svg")
 		h5 AUSTRALIA
-		Button(kind="secondary") SEE LOCATION
+		Button(kind="secondary" @click="goToUrl('/locations')") SEE LOCATION
 	.links-icons__item
 		img(src="~@assets/shared/desktop/illustration-united-kingdom.svg")
 		h5 AUSTRALIA
-		Button(kind="secondary") SEE LOCATION
+		Button(kind="secondary" @click="goToUrl('/locations')") SEE LOCATION
 </template>
 
 <style lang="stylus" scoped>
@@ -39,6 +39,11 @@ import Button from '@atoms/Button.vue';
 export default defineComponent({
 	components: {
 		Button,
+	},
+	methods: {
+		goToUrl(url: string): void {
+			this.$router.push(url);
+		},
 	},
 });
 </script>

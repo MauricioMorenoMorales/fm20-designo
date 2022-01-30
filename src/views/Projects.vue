@@ -10,19 +10,19 @@
 				h4 {{item.title}}
 				p {{item.description}}
 	.projects__links
-		.projects__links__item.web(v-show="pageName !== 'web-design'")
+		.projects__links__item.web(v-show="pageName !== 'web-design'" @click="goToUrl('/projects/web-design')")
 			.projects__links__item__content
 				h3 Web design
 				.projects__links__item__link
 					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
-		.projects__links__item.app(v-show="pageName !== 'app-design'")
+		.projects__links__item.app(v-show="pageName !== 'app-design'" @click="goToUrl('/projects/app-design')")
 			.projects__links__item__content
 				h3 app design
 				.projects__links__item__link
 					h5 view projects
 					img(src="~@assets/shared/desktop/icon-right-arrow.svg" alt="")
-		.projects__links__item.graphic(v-show="pageName !== 'graphic-design'")
+		.projects__links__item.graphic(v-show="pageName !== 'graphic-design'" @click="goToUrl('/projects/graphic-design')")
 			.projects__links__item__content
 				h3 graphic design
 				.projects__links__item__link
@@ -228,6 +228,9 @@ export default defineComponent({
 	methods: {
 		getImageUrl(url: string) {
 			return require(`../assets/${url}`);
+		},
+		goToUrl(url: string): void {
+			this.$router.push(url);
 		},
 	},
 });

@@ -1,7 +1,7 @@
 <template lang="pug">
 header
 	.header
-		img(src="~@assets/shared/desktop/logo-dark.png" alt="Designo Logo" @click="closeMenu()")
+		img(src="~@assets/shared/desktop/logo-dark.png" alt="Designo Logo" @click="goToUrl('/')")
 		.links
 			router-link(to="/about") Our company
 			router-link(to="/locations") Locations
@@ -33,6 +33,7 @@ header
 	& img
 		width 160px
 		height 20px
+		cursor pointer
 .links
 	display none
 .plegable
@@ -97,6 +98,9 @@ export default defineComponent({
 		},
 		closeMenu(): void {
 			this.menuOpened = false;
+		},
+		goToUrl(url: string): void {
+			this.$router.push(url);
 		},
 	},
 	mounted() {

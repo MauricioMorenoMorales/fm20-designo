@@ -4,11 +4,11 @@ footer
 		.call__text
 			h2.h2 Let's talk about your project
 			p Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-		Button Get in touch
+		Button(@click-event="goToUrl('/contact')") Get in touch
 	.footer--container
 		.footer(:class="{simple}")
 			.footer__navigation
-				img(src="~@assets/shared/desktop/logo-light.png" alt="Designo Logo")
+				img(src="~@assets/shared/desktop/logo-light.png" alt="Designo Logo" @click="goToUrl('/')")
 				.footer__navigation__links
 					router-link(to="/about") Our company
 					router-link(to="/locations") Locations
@@ -69,6 +69,7 @@ footer
 			height 25px
 			width 200px
 			margin-bottom 30px
+			cursor pointer
 		&__links
 			display flex
 			flex-direction column
@@ -155,6 +156,11 @@ export default defineComponent({
 	components: {
 		Button,
 		Icon,
+	},
+	methods: {
+		goToUrl(url: string): void {
+			this.$router.push(url);
+		},
 	},
 });
 </script>

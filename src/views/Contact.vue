@@ -10,7 +10,7 @@
 		section.form__inputs
 			Input(@change-value="inputFunction" errorMessage="Cannot be empty" name="name" placeholder="Name")
 			Input(@change-value="inputFunction" errorMessage="Introduce valid Email" name="email" placeholder="Email Address" emailValidation)
-			Input(@change-value="inputFunction" errorMessage="Cannot be empty" name="phone" placeholder="phone")
+			Input(@change-value="inputFunction" errorMessage="Cannot be empty" name="phone" placeholder="Phone")
 			Input(@change-value="inputFunction" errorMessage="Cannot be empty" name="message" textarea placeholder="Your Message")
 			Button(@click-event="sendForm()") Submit
 	Links.mgb100
