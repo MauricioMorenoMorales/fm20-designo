@@ -196,7 +196,7 @@
 		height 640px
 		padding-top 130px
 		padding-left 90px
-		padding-right 40%
+		padding-right 490px
 		background-position-x calc(100% + 90px), calc(100%)
 		background-position-y -30px, center
 	.pages-links
